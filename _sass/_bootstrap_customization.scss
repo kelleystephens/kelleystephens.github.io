@@ -253,10 +253,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 
   &-name {
-    background-color: #143651;
+    background-color: $blue;
     color: $gray-100;
     text-align: center;
     @include media-breakpoint-up(lg) {
@@ -265,20 +265,45 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
       }
 
       h2 {
-        color: #FBC1C3;
+        color: $pink-light;
         font-size: 3.5rem;
       }
     }
   }
 
   &-about {
-    @include media-breakpoint-up(lg) {
-      flex-direction: row;
+    background-color: $pink-light;
+    color: $blue;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+
+    .photos {
+      width: 85%;
+
+      img {
+        padding: 1rem 0 1rem 0;
+      }
+
+      @include media-breakpoint-up(lg) {
+        flex-direction: column;
+        width: 25%;
+      }
     }
 
-    img {
-      width: 25%;
+    .details {
+      font-size: 1.2rem;
+      width: 90%;
+    }
 
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+
+      .details {
+        font-size: 1.5rem;
+        max-width: 50%;
+      }
     }
   }
 
