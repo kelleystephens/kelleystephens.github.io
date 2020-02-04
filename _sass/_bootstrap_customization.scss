@@ -256,6 +256,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
   height: 100vh;
 
   &-name {
+    background-color: #143651;
     color: $gray-100;
     text-align: center;
     @include media-breakpoint-up(lg) {
@@ -263,7 +264,8 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
         font-size: 6rem;
       }
 
-      h3 {
+      h2 {
+        color: #FBC1C3;
         font-size: 3.5rem;
       }
     }
